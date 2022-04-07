@@ -1,3 +1,4 @@
-Instructions for A6 - group 18
-
-Step 1...
+﻿Instructions to run the project:
+1. Open the folder called 'group_18_assignment6'
+2. Open the file called 'group_18_assignment6.pde'
+3. Click 'Run'
