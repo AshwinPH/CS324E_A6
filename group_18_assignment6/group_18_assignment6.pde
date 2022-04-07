@@ -12,7 +12,7 @@ float chanceOfLiving = 0.4;
 Plague plague;
 
 void setup(){
-  frameRate(5);
+  frameRate(1);
   size(700,700);
   fill(0);
   rect(0,0,width,height);
@@ -63,6 +63,7 @@ void draw(){
    rect(0,0,width,height);
    updateGrid();
    
+   noLoop();
 }
 
 void updateGrid(){
@@ -70,9 +71,12 @@ void updateGrid(){
    for (int i=0; i<width/cellWidth; i++) {
     for (int j=0; j<height/cellHeight; j++) {
       currentGrid[i][j] = futureGrid[i][j];
-      Cell cell = new Cell(currentGrid[i][j],i,j);
+      Villager cell = new Villager(currentGrid[i][j],i,j,0);
+      cell.update();
+      
       cell.display();
     }
+    println();
    }
    plague.createMedic();
 }
