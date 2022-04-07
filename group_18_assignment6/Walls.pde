@@ -1,13 +1,13 @@
-class Cell {
+class Wall {
   PVector pos;
   int index;
  
-  Cell(int x, int y, int index) {
+  Wall(int x, int y, int index) {
     this.pos = new PVector(x,y);
     this.index = index;  
   }
 
- void change(Cell[][] board, Cell[][] future) {
+ void change(Wall[][] board, Wall[][] future) {
     for (int y = 0; y< board[0].length; y++) {
       for (int x = 0; x < board.length; x++) {
        
@@ -37,7 +37,7 @@ class Cell {
     board = future;
   }
 
-  int checkDestroyers(int x, int y, Cell[][] board) {
+  int checkDestroyers(int x, int y, Wall[][] board) {
     int blackneighbors = 0;
     //int whiteneighbors = 0;
        for (int i = -1; i< 2; i++) {
@@ -53,7 +53,7 @@ class Cell {
     }
    
  
-  int checkBuilders(int x, int y, Cell[][] board) {
+  int checkBuilders(int x, int y, Wall[][] board) {
     //int blackneighbors = 0;
     int whiteneighbors = 0;
        for (int i = -1; i< 2; i++) {
