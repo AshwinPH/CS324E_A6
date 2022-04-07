@@ -1,17 +1,17 @@
-Cell c;
-Cell[][] gameboard;
-Cell[][] future;
+Wall c;
+Wall[][] gameboard;
+Wall[][] future;
 
 void setup(){
   size(640,480);
  
  
-  gameboard = new Cell[width/10][height/10];
-  future = new Cell[width/10][height/10];
+  gameboard = new Wall[width/10][height/10];
+  future = new Wall[width/10][height/10];
   // Initialize the game board
   for (int x = 0; x < gameboard.length; x++){
     for (int y =0; y < gameboard[0].length; y++){
-      gameboard[x][y] = new Cell(x, y, int(random(3)));
+      gameboard[x][y] = new Wall(x, y, int(random(3)));
       future[x][y] = gameboard[x][y];
     }
   }
