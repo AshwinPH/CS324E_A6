@@ -46,6 +46,9 @@ class Cell{
     }  else if (this.id == "immune"){
       fill(immuneColor);
     }
+    
      rect(xpos,ypos, cellWidth,cellHeight);
+     
+     
   }
 }
