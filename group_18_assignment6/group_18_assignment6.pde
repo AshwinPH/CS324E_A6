@@ -4,8 +4,8 @@ Walls[][] future;
 
 void setup(){
   size(640,480);
- 
- 
+  
+  c = new Walls(0,0,0);
   gameboard = new Walls[width/10][height/10];
   future = new Walls[width/10][height/10];
   // Initialize the game board
