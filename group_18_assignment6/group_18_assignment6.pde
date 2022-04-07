@@ -12,7 +12,7 @@ float chanceOfLiving = 0.4;
 Plague plague;
 
 void setup(){
-  frameRate(1);
+  frameRate(5);
   size(700,700);
   fill(0);
   rect(0,0,width,height);
@@ -63,7 +63,7 @@ void draw(){
    rect(0,0,width,height);
    updateGrid();
    
-   noLoop();
+   //noLoop();
 }
 
 void updateGrid(){
