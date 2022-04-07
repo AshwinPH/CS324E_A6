@@ -1,17 +1,17 @@
-Wall c;
-Wall[][] gameboard;
-Wall[][] future;
+Walls c;
+Walls[][] gameboard;
+Walls[][] future;
 
 void setup(){
   size(640,480);
  
  
-  gameboard = new Wall[width/10][height/10];
-  future = new Wall[width/10][height/10];
+  gameboard = new Walls[width/10][height/10];
+  future = new Walls[width/10][height/10];
   // Initialize the game board
   for (int x = 0; x < gameboard.length; x++){
     for (int y =0; y < gameboard[0].length; y++){
-      gameboard[x][y] = new Wall(x, y, int(random(3)));
+      gameboard[x][y] = new Walls(x, y, int(random(3)));
       future[x][y] = gameboard[x][y];
     }
   }
