@@ -1,19 +1,19 @@
-class Wall {
+class Walls {
   PVector pos;
   int index;
  
-  Wall(int x, int y, int index) {
+  Walls(int x, int y, int index) {
     this.pos = new PVector(x,y);
     this.index = index;  
   }
 
- void change(Wall[][] board, Wall[][] future) {
+ void change(Walls[][] board, Walls[][] future) {
     for (int y = 0; y< board[0].length; y++) {
       for (int x = 0; x < board.length; x++) {
        
         int b = this.checkDestroyers(x, y, board);
         int w = this.checkBuilders(x, y, board);
-        //if the cell is a wall
+        //if the cell is a walls
         if (board[x][y].index == 0) {
           if (b>= 2) {
             future[x][y].index = 1;
@@ -37,7 +37,7 @@ class Wall {
     board = future;
   }
 
-  int checkDestroyers(int x, int y, Wall[][] board) {
+  int checkDestroyers(int x, int y, Walls[][] board) {
     int blackneighbors = 0;
     //int whiteneighbors = 0;
        for (int i = -1; i< 2; i++) {
@@ -53,7 +53,7 @@ class Wall {
     }
    
  
-  int checkBuilders(int x, int y, Wall[][] board) {
+  int checkBuilders(int x, int y, Walls[][] board) {
     //int blackneighbors = 0;
     int whiteneighbors = 0;
        for (int i = -1; i< 2; i++) {
