@@ -5,7 +5,10 @@ class Cell{
     this.id = id;
     index = new PVector(x,y);
   }
-  
+  Cell(){
+   this.id = "null";
+   index = new PVector(0,0);
+  }
   // checkNeighbors looks at all the neighbors of the cell 
   // if any of these neighbors has an id in the passed in String[] changeFrom
   // their id will get changed to the id passed in as changeTo
